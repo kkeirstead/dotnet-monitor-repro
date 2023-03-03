@@ -15,6 +15,7 @@ public class BackgroundWorker : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
+            /*
             using var client = _httpClientFactory.CreateClient(nameof(BackgroundWorker));
             
             var tasks = Enumerable
@@ -30,9 +31,9 @@ public class BackgroundWorker : BackgroundService
             else
             {
                 _logger.LogWarning("Requests failed");
-            }
+            }*/
             
-            //await Task.Delay(1000, stoppingToken);
+            await Task.Delay(1000, stoppingToken); // Comment this, and uncomment the block to see the difference in behavior.
         }
     }
 }

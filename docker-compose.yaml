@@ -46,6 +46,7 @@ services:
     command: collect --urls "http://*:80" --no-auth
     environment:
       DotnetMonitor_Metrics__Providers__0__ProviderName: "System.Net.Http"
+      DotnetMonitor_Metrics__Providers__1__ProviderName: "Microsoft-AspNetCore-Server-Kestrel"
     ports:
       - "6003:80"
     depends_on:
